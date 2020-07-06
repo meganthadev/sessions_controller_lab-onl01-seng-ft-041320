@@ -13,6 +13,7 @@ class SessionsController < ApplicationController
      flash.now[:error] = "Invalid email/password"
       redirect_to '/login'
   end 
+end 
   
   def destroy 
     session.delete :name

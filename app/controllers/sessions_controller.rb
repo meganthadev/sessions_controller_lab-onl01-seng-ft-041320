@@ -1,2 +1,5 @@
-class ApplicationController < ActionControllerforgery with: :exception
+class SessionsController < ApplicationController
+  
+  
+  
 end

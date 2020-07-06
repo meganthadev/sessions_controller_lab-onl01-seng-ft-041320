@@ -8,8 +8,11 @@ class SessionsController < ApplicationController
      redirect_to '/'
    else
      redirect_to '/login'
-  end  
-end 
+   end 
+  if sessions[:name].nil?
+     flash.now[:error] = "Invalid email/password"
+      redirect_to '/login'
+  end 
   
   def destroy 
     session.delete :name
